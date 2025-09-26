@@ -1,0 +1,103 @@
+
+.si-subheading {
+    margin: 0;
+    color: #BE8E5D;
+    font-size: 1.75em;
+    line-height: 1;
+    font-weight: 400;
+    text-transform: uppercase
+}
+
+.si-subheading strong {
+    color: #fff;
+    font-weight: 700
+}
+
+@media (min-width: 60em) {
+    .si-subheading {
+        font-size:2.1875em
+    }
+}
+
+.si-heading {
+    margin: 0;
+    display: block;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase
+}
+
+.site-intro {
+    position: relative;
+    background-image: url(//cougargroup.com/wp-content/themes/cougargroup-default/img/hero-home.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover
+}
+
+.site-intro:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(62,62,62,.88)
+}
+
+.site-intro .inner-wrap,.site-intro .inner-wrap-narrow,.site-intro .inner-wrap-wide,.site-intro .inner-wrap-fullwidth {
+    padding-top: 1.875em;
+    padding-bottom: 1.875em;
+    position: relative;
+    z-index: 1
+}
+
+@media (min-width: 40em) {
+    .site-intro .inner-wrap,.site-intro .inner-wrap-narrow,.site-intro .inner-wrap-wide,.site-intro .inner-wrap-fullwidth {
+        padding-top:2.8125em;
+        padding-bottom: 2.8125em
+    }
+}
+
+@media (min-width: 60em) {
+    .site-intro:before {
+        background:linear-gradient(90deg,#3e3e3e 0%,rgba(62,62,62,.7) 30%,rgba(62,62,62,0) 50%);
+    }
+
+    .site-intro .inner-wrap,.site-intro .inner-wrap-narrow,.site-intro .inner-wrap-wide,.site-intro .inner-wrap-fullwidth {
+        padding-top: 6.25em;
+        padding-bottom: 6.1875em
+    }
+}
+
+@media (min-width: 60em) {
+    .si-wrap {
+        width:calc(50% - 20px);
+        padding: 0 1.25em 0 0
+    }
+}
+
+
+.inner-wrap,.inner-wrap-fullwidth,.inner-wrap-wide,.inner-wrap-narrow {
+    max-width: 71.75em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.875em 1em
+}
+
+.inner-wrap:after,.inner-wrap-fullwidth:after,.inner-wrap-wide:after,.inner-wrap-narrow:after {
+    clear: both;
+    content: "";
+    display: table
+}
+
+.inner-wrap>*:first-child,.inner-wrap-fullwidth>*:first-child,.inner-wrap-wide>*:first-child,.inner-wrap-narrow>*:first-child {
+    margin-top: 0
+}
+
+.inner-wrap>*:last-child,.inner-wrap-fullwidth>*:last-child,.inner-wrap-wide>*:last-child,.inner-wrap-narrow>*:last-child {
+    margin-bottom: 0
+}

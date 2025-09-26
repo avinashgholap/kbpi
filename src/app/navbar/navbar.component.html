@@ -1,0 +1,39 @@
+<mat-toolbar color="primary" class="kb-toolbar">
+  <button
+    mat-icon-button
+    (click)="toggleSidenav()"
+    aria-label="Open menu"
+    class="kb-toolbar__menu"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <div class="navbar-container">
+    <div class="logo-container">
+      <img src="kbpi.png" alt="KBPI logo" class="kb-logo" />
+    </div>
+    <div class="menu-container"></div>
+  </div>
+
+  <span class="kb-toolbar__spacer"></span>
+  <nav class="kb-toolbar__links">
+    <div class="menu-item">Home</div>
+    <div class="menu-item">Contact</div>
+    <div class="menu-item">About Us</div>
+  </nav>
+  <div class="kb-toolbar-offset"></div>
+</mat-toolbar>
+
+<mat-sidenav-container class="kb-sidenav-container">
+  <mat-sidenav #sidenav mode="over" class="kb-sidenav" (click)="closeSidenav()">
+    <mat-nav-list>
+      <a mat-list-item routerLink="/home" routerLinkActive="active">Home</a>
+      <a mat-list-item routerLink="/login" routerLinkActive="active">Mobile</a>
+      <a mat-list-item routerLink="/logout" routerLinkActive="active">Laptop</a>
+      <a mat-list-item routerLink="/tv" routerLinkActive="active">Tv</a>
+      <a mat-list-item routerLink="/cart" routerLinkActive="active">MyCart</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-home></app-home>
+  </mat-sidenav-content>
+</mat-sidenav-container>
