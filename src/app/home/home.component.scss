@@ -31,7 +31,7 @@
 
 .site-intro {
     position: relative;
-    background-image: url(//cougargroup.com/wp-content/themes/cougargroup-default/img/hero-home.png);
+    background-image: url(/home-banner.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: scroll;
@@ -100,4 +100,135 @@
 
 .inner-wrap>*:last-child,.inner-wrap-fullwidth>*:last-child,.inner-wrap-wide>*:last-child,.inner-wrap-narrow>*:last-child {
     margin-bottom: 0
+}
+
+
+.value-added-module {
+    text-align: center
+}
+
+.value-added-module .inner-wrap,.value-added-module .inner-wrap-narrow,.value-added-module .inner-wrap-wide,.value-added-module .inner-wrap-fullwidth {
+    padding-top: 1.875em;
+    padding-bottom: 1.875em
+}
+
+@media (min-width: 40em) {
+    .value-added-module .inner-wrap,.value-added-module .inner-wrap-narrow,.value-added-module .inner-wrap-wide,.value-added-module .inner-wrap-fullwidth {
+        padding-top:2.8125em;
+        padding-bottom: 2.8125em
+    }
+}
+
+@media (min-width: 60em) {
+    .value-added-module .inner-wrap,.value-added-module .inner-wrap-narrow,.value-added-module .inner-wrap-wide,.value-added-module .inner-wrap-fullwidth {
+        padding-top:3.75em;
+        padding-bottom: 3.75em
+    }
+}
+
+
+.vam-item-listing {
+    width: 37.5em;
+    max-width: 100%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+
+.vam-item {
+    width: 50%;
+    padding: 0 .9375em;
+    margin-bottom: 1.5em;
+    text-align: center
+}
+
+.vam-item figure {
+    height: 6.25em;
+    margin: 0 auto;
+    display: table
+}
+
+.vam-item figure span {
+    display: table-cell;
+    vertical-align: middle
+}
+
+.vam-item figure img {
+    vertical-align: middle;
+    height: 6.25em
+}
+
+@media (min-width: 60em) {
+    .vam-item {
+        width:33.33%
+    }
+}
+
+.vam-item-title {
+    margin: .7142857143em 0 0;
+    color: #BE8E5D;
+    font-size: .875em;
+    font-weight: 400;
+    line-height: 1.45
+}
+
+@media (min-width: 60em) {
+    .vam-item-title {
+        margin:.625em 1.25em 0;
+        font-size: 1em
+    }
+}
+
+.vam-item-link {
+    display: block;
+    color: #BE8E5D;
+    text-decoration: none;
+    text-transform: none
+}
+
+.vam-item-link:focus,.vam-item-link:hover {
+    text-decoration: underline;
+    color: #BE8E5D
+}
+
+.vam-bottom-text {
+    margin-top: .55em;
+    color: #1d1d1d;
+    font-size: 1.25em;
+    font-weight: 300;
+    line-height: 1.45
+}
+
+.vam-bottom-text p {
+    margin: 0
+}
+
+.vam-item-img {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 50%;
+}
+
+.vam-content-wrap {
+    margin-bottom: 2rem;
 }

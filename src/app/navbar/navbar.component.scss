@@ -7,6 +7,10 @@
   height: 72px; /* taller toolbar */
   background: #000; /* requested black */
   color: #fff;
+  position: sticky;
+  top: 0;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  z-index: 2;
 }
 
 .kb-toolbar .kb-toolbar__brand {
@@ -80,3 +84,6 @@
 }
 
 
+.kb-sidenav-content {
+  height: auto;
+}
