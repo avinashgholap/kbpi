@@ -9,7 +9,7 @@
   <mat-dialog-content class="modal-content">
     <form
       [formGroup]="data.form"
-      (ngSubmit)="onSubmit()"
+      (ngSubmit)="onSubmit($event)"
       name="contact"
       method="POST"
       data-netlify="true"

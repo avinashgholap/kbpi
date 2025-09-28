@@ -33,8 +33,15 @@ export class ContactModalComponent {
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {}
 
-  onSubmit(): void {
+  onSubmit(event: Event): void {
+    event.preventDefault(); // prevent Angular's default submit handling
+
     if (this.data.form.valid) {
+      // Submit the form to Netlify
+      const formEl = event.target as HTMLFormElement;
+      formEl.submit();
+
+      // Close the modal
       this.dialogRef.close(true);
     }
   }
