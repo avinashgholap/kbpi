@@ -1,0 +1,75 @@
+.contact-us-sticky-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #BE8E5D !important;
+  color: white !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  width: 60px;
+  height: 60px;
+}
+
+.contact-us-sticky-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  background-color: #a67c52 !important;
+}
+
+.contact-us-sticky-btn:active {
+  transform: scale(0.95);
+}
+
+.contact-us-sticky-btn mat-icon {
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .contact-us-sticky-btn {
+    bottom: 15px;
+    right: 15px;
+    width: 56px;
+    height: 56px;
+  }
+
+  .contact-us-sticky-btn mat-icon {
+    font-size: 22px;
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-us-sticky-btn {
+    bottom: 10px;
+    right: 10px;
+    width: 52px;
+    height: 52px;
+  }
+
+  .contact-us-sticky-btn mat-icon {
+    font-size: 20px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Animation for button appearance */
+@keyframes slideInUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.contact-us-sticky-btn {
+  animation: slideInUp 0.5s ease-out;
+}

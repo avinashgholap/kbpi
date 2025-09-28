@@ -7,6 +7,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from '../home/home.component';
+import { FooterComponent } from '../footer/footer.component';
+import { ContactComponent } from '../contact/contact.component';
 
 @Component({
   selector: 'app-navbar',
@@ -21,6 +23,8 @@ import { HomeComponent } from '../home/home.component';
     MatIconModule,
     MatListModule,
     HomeComponent,
+    FooterComponent,
+    ContactComponent,
   ],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],

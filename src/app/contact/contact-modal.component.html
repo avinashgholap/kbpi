@@ -1,0 +1,91 @@
+<div class="contact-modal">
+  <div class="modal-header">
+    <h2 mat-dialog-title>Contact Us</h2>
+    <button mat-icon-button mat-dialog-close class="close-button">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+
+  <mat-dialog-content class="modal-content">
+    <form
+      [formGroup]="data.form"
+      (ngSubmit)="onSubmit()"
+      name="contact"
+      method="POST"
+      data-netlify="true"
+    >
+      <!-- Netlify hidden field -->
+      <input type="hidden" name="form-name" value="contact" />
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Email Address</mat-label>
+        <input
+          matInput
+          type="email"
+          formControlName="email"
+          name="email"
+          placeholder="your.email@example.com"
+        />
+        <mat-icon matSuffix>email</mat-icon>
+        <mat-error *ngIf="data.form.get('email')?.hasError('required')">
+          Email is required
+        </mat-error>
+        <mat-error *ngIf="data.form.get('email')?.hasError('email')">
+          Please enter a valid email address
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Phone Number</mat-label>
+        <input
+          matInput
+          type="tel"
+          formControlName="phone"
+          name="phone"
+          placeholder="+1 (555) 123-4567"
+        />
+        <mat-icon matSuffix>phone</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Company Name</mat-label>
+        <input
+          matInput
+          type="text"
+          formControlName="companyName"
+          name="companyName"
+          placeholder="Your Company Name"
+        />
+        <mat-icon matSuffix>business</mat-icon>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Description</mat-label>
+        <textarea
+          matInput
+          formControlName="description"
+          name="description"
+          placeholder="Tell us about your packaging needs..."
+          rows="4"
+        ></textarea>
+        <mat-icon matSuffix>description</mat-icon>
+      </mat-form-field>
+
+      <!-- ✅ Keep actions inside the form -->
+      <mat-dialog-actions class="modal-actions">
+        <button mat-button mat-dialog-close class="cancel-button">
+          Cancel
+        </button>
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit"
+          [disabled]="!data.form.valid"
+          class="submit-button"
+        >
+          Submit
+        </button>
+      </mat-dialog-actions>
+    </form>
+  </mat-dialog-content>
+</div>
