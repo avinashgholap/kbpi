@@ -35,6 +35,8 @@
     font-weight: 500;
     color: white;
     text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
   }
   
   .menu-item::after {
@@ -56,10 +58,16 @@
   .menu-item:hover::after {
     width: 100%; /* animate underline expansion */
   }
+
+  .menu-item.active {
+    color: #BE8E5D;
+    font-weight: 600;
+  }
+
+  .menu-item.active::after {
+    width: 100%; /* show underline for active state */
+  }
   
-}
-.kb-toolbar__links a.active {
-  text-decoration: underline;
 }
 
 .kb-toolbar__menu {
@@ -97,6 +105,23 @@ mat-sidenav-content .scroll-container {
   display: flex;
   flex-direction: column;
   min-height: 0;          /* Allow flex child to shrink */
+}
+
+/* Mobile sidenav active link styling */
+.kb-sidenav {
+  .mat-mdc-list-item.active {
+    background-color: rgba(190, 142, 93, 0.1);
+    color: #BE8E5D;
+    font-weight: 600;
+  }
+
+  .mat-mdc-list-item.active .mdc-list-item__primary-text {
+    color: #BE8E5D;
+  }
+
+  .mat-mdc-list-item:hover {
+    background-color: rgba(190, 142, 93, 0.05);
+  }
 }
 // .kb-sidenav-content {
 //   height: 100vh;

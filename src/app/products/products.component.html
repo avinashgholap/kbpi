@@ -1,0 +1,45 @@
+<section
+  class="content-image-module rocket-lazyload entered lazyloaded"
+  style="background-image: url('bg-cardboard.jpg')"
+  data-ll-status="loaded"
+>
+  <div class="cim-grid">
+    @for(product of products; track product.heading) {
+    <div class="cim-item">
+      <div class="inner-wrap">
+        <div class="cim-item-wrap tse-cols-2">
+          <div class="cim-img-wrap">
+            <div class="lightbox">
+              <img
+                class="cim-item-img"
+                [src]="product.image"
+                alt="More Than A Provider. A Proven Expert."
+                title="More Than A Provider. A Proven Expert."
+              />
+            </div>
+          </div>
+
+          <div class="cim-content-wrap">
+            <h2 class="cim-heading">
+              <strong>{{ product.heading }}</strong>
+            </h2>
+
+            <div class="cim-content">
+              <p>
+                {{ product.description }}
+              </p>
+            </div>
+
+            <!-- <a
+                        class="cim-link btn"
+                        href=""
+                        target="_self"
+                        >Learn More</a
+                      > -->
+          </div>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+</section>
