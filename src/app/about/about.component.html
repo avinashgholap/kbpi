@@ -1,0 +1,234 @@
+<div class="about-container">
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title">About K B Industries</h1>
+      <p class="hero-subtitle">
+        Your trusted partner in industrial packaging solutions since 2007
+      </p>
+    </div>
+  </section>
+
+  <!-- Company Overview -->
+  <section class="overview-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Company Overview</h2>
+        <div class="section-divider"></div>
+      </div>
+      <div class="overview-content">
+        <p>
+          Incepted in the year 2007, We <strong>K B Industries</strong>, are
+          engaged in manufacturing a wide range of Corrugated, Printed,
+          Unprinted, and Laminated Varnish Boxes which are extensively used in
+          packaging, industrial and agricultural sectors.
+        </p>
+        <p>
+          We possess a modern manufacturing facility in 6000 sq/feet area, which
+          includes sophisticated machines and advanced technologies. Our motto
+          is providing premium quality range of packaging products in diverse
+          specifications.
+        </p>
+        <p>
+          We are progressing with tremendous speed to maintain pace with the
+          international trend of the market.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Machinery & Infrastructure -->
+  <section class="machinery-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Machinery & Infrastructure</h2>
+        <div class="section-divider"></div>
+        <p class="section-description">
+          Our state-of-the-art manufacturing facility is equipped with modern
+          machinery to ensure high-quality production and efficiency.
+        </p>
+      </div>
+
+      <mat-card class="machinery-card">
+        <mat-card-header>
+          <mat-card-title>
+            <mat-icon>precision_manufacturing</mat-icon>
+            Production Machinery
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="table-container">
+            <table
+              mat-table
+              [dataSource]="machineryData"
+              class="machinery-table"
+            >
+              <ng-container matColumnDef="srNo">
+                <th mat-header-cell *matHeaderCellDef>SR No</th>
+                <td mat-cell *matCellDef="let element">{{ element.srNo }}</td>
+              </ng-container>
+
+              <ng-container matColumnDef="machineType">
+                <th mat-header-cell *matHeaderCellDef>Machine Type</th>
+                <td mat-cell *matCellDef="let element">
+                  {{ element.machineType }}
+                </td>
+              </ng-container>
+
+              <ng-container matColumnDef="size">
+                <th mat-header-cell *matHeaderCellDef>Size</th>
+                <td mat-cell *matCellDef="let element">{{ element.size }}</td>
+              </ng-container>
+
+              <ng-container matColumnDef="qty">
+                <th mat-header-cell *matHeaderCellDef>Qty</th>
+                <td mat-cell *matCellDef="let element">{{ element.qty }}</td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="machineryColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: machineryColumns"></tr>
+            </table>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+      <mat-card class="testing-card">
+        <mat-card-header>
+          <mat-card-title>
+            <mat-icon>science</mat-icon>
+            Testing Equipment
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="table-container">
+            <table
+              mat-table
+              [dataSource]="testingEquipmentData"
+              class="testing-table"
+            >
+              <ng-container matColumnDef="srNo">
+                <th mat-header-cell *matHeaderCellDef>SR No</th>
+                <td mat-cell *matCellDef="let element">{{ element.srNo }}</td>
+              </ng-container>
+
+              <ng-container matColumnDef="machine">
+                <th mat-header-cell *matHeaderCellDef>Machine</th>
+                <td mat-cell *matCellDef="let element">
+                  {{ element.machine }}
+                </td>
+              </ng-container>
+
+              <ng-container matColumnDef="qty">
+                <th mat-header-cell *matHeaderCellDef>Qty</th>
+                <td mat-cell *matCellDef="let element">{{ element.qty }}</td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="testingColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: testingColumns"></tr>
+            </table>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </section>
+
+  <!-- Raw Material Sources -->
+  <section class="vendors-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Raw Material Sources / Vendors</h2>
+        <div class="section-divider"></div>
+        <p class="section-description">
+          We maintain strong relationships with trusted suppliers to ensure
+          consistent quality and reliable supply of raw materials.
+        </p>
+      </div>
+
+      <mat-card class="vendors-card">
+        <mat-card-header>
+          <mat-card-title>
+            <mat-icon>business</mat-icon>
+            Trusted Paper Suppliers
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="vendors-grid">
+            <div class="vendor-item" *ngFor="let vendor of vendors">
+              <mat-icon class="vendor-icon">location_on</mat-icon>
+              <span class="vendor-name">{{ vendor }}</span>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </section>
+
+  <!-- Company Details -->
+  <section class="company-details-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Company Details</h2>
+        <div class="section-divider"></div>
+        <p class="section-description">
+          Business identity and compliance information for your reference.
+        </p>
+      </div>
+
+      <mat-card class="company-details-card">
+        <mat-card-header>
+          <mat-card-title>
+            <mat-icon>account_balance</mat-icon>
+            Business Information
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="details-grid">
+            <div class="detail-item">
+              <mat-icon class="detail-icon">person</mat-icon>
+              <div class="detail-content">
+                <h4>Proprietors</h4>
+                <p>{{ companyDetails.proprietors }}</p>
+              </div>
+            </div>
+
+            <div class="detail-item">
+              <mat-icon class="detail-icon">receipt</mat-icon>
+              <div class="detail-content">
+                <h4>PAN</h4>
+                <p>{{ companyDetails.pan }}</p>
+              </div>
+            </div>
+
+            <div class="detail-item">
+              <mat-icon class="detail-icon">receipt_long</mat-icon>
+              <div class="detail-content">
+                <h4>GST</h4>
+                <p>{{ companyDetails.gst }}</p>
+              </div>
+            </div>
+
+            <div class="detail-item">
+              <mat-icon class="detail-icon">account_balance</mat-icon>
+              <div class="detail-content">
+                <h4>Bank</h4>
+                <p>{{ companyDetails.bank }}</p>
+              </div>
+            </div>
+
+            <div class="detail-item turnover-item">
+              <mat-icon class="detail-icon">trending_up</mat-icon>
+              <div class="detail-content">
+                <h4>Turnover</h4>
+                <div class="turnover-list">
+                  <p *ngFor="let turnover of companyDetails.turnover">
+                    {{ turnover }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </section>
+</div>

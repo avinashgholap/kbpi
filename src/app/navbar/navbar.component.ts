@@ -38,6 +38,10 @@ export class NavbarComponent {
       route: '/home',
     },
     {
+      label: 'About Us',
+      route: '/about',
+    },
+    {
       label: 'Products',
       route: '/products',
     },
