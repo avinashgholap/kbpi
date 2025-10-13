@@ -11,6 +11,8 @@
   top: 0;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   z-index: 2;
+
+  
 }
 
 .kb-toolbar .kb-toolbar__brand {
@@ -29,45 +31,45 @@
   column-gap: 1rem;
   font-size: 14px;
 
-  .menu-item {
-    position: relative;
-    margin: 2px 10px;
-    font-weight: 500;
-    color: white;
-    text-decoration: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
   
-  .menu-item::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background-color: #BE8E5D;
-    transition: width 0.3s ease-in-out;
-  }
-  
-  .menu-item:hover {
-    color: #BE8E5D;
-    font-weight: 600;
-  }
-  
-  .menu-item:hover::after {
-    width: 100%; /* animate underline expansion */
-  }
+.menu-item {
+  position: relative;
+  margin: 2px 10px;
+  font-weight: 500;
+  color: white !important;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
-  .menu-item.active {
-    color: #BE8E5D;
-    font-weight: 600;
-  }
+.menu-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #BE8E5D;
+  transition: width 0.3s ease-in-out;
+}
 
-  .menu-item.active::after {
-    width: 100%; /* show underline for active state */
-  }
-  
+.menu-item:hover {
+  color: #BE8E5D;
+  font-weight: 600;
+}
+
+.menu-item:hover::after {
+  width: 100%; /* animate underline expansion */
+}
+
+.menu-item.active {
+  color: #BE8E5D;
+  font-weight: 600;
+}
+
+.menu-item.active::after {
+  width: 100%; /* show underline for active state */
+}
 }
 
 .kb-toolbar__menu {
@@ -127,3 +129,58 @@ mat-sidenav-content .scroll-container {
 //   height: 100vh;
 
 // }
+
+
+.menu-item {
+  position: relative;
+  margin: 2px 10px;
+  font-weight: 500;
+  color: white !important;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #BE8E5D;
+  transition: width 0.3s ease-in-out;
+}
+
+.menu-item:hover {
+  color: #BE8E5D;
+  font-weight: 600;
+}
+
+.menu-item:hover::after {
+  width: 100%; /* animate underline expansion */
+}
+
+.menu-item.active {
+  color: #BE8E5D;
+  font-weight: 600;
+}
+
+.menu-item.active::after {
+  width: 100%; /* show underline for active state */
+}
+.mat-drawer {
+  background-color: black !important;
+}
+
+::ng-deep .mdc-list-item__primary-text {
+  color: white !important;
+}
+::ng-deep .mat-mdc-list-item.active {
+  color: #BE8E5D;
+  font-weight: 600;
+}
+
+::ng-deep .mdc-list-item {
+  align-items: flex-start;
+}

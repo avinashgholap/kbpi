@@ -32,9 +32,13 @@
   <mat-sidenav #sidenav mode="over" class="kb-sidenav" (click)="closeSidenav()">
     <mat-nav-list>
       @for(menu of menuItems; track menu.route) {
-      <a mat-list-item [routerLink]="menu.route" routerLinkActive="active">{{
-        menu.label
-      }}</a>
+      <a
+        class="menu-item"
+        mat-list-item
+        [routerLink]="menu.route"
+        routerLinkActive="active"
+        >{{ menu.label }}</a
+      >
       }
       <!-- <a mat-list-item routerLink="/home" routerLinkActive="active">Home</a>
       <a mat-list-item routerLink="/login" routerLinkActive="active">Mobile</a>
