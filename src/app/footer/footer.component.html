@@ -14,7 +14,13 @@
       <h4 class="footer-title">Quick Links</h4>
       <ul class="footer-links">
         <li *ngFor="let link of quickLinks">
-          <a [href]="link.url" class="footer-link">{{ link.name }}</a>
+          <a
+            [routerLink]="link.url"
+            routerLinkActive="active"
+            class="footer-link"
+            (click)="scrollToTop()"
+            >{{ link.name }}</a
+          >
         </li>
       </ul>
     </div>
@@ -39,7 +45,7 @@
         </div>
         <div class="contact-item">
           <mat-icon class="contact-icon">phone</mat-icon>
-          <span>{{ contactInfo.phone }}</span>
+          <span>{{ contactInfo.contact }}</span>
         </div>
         <div class="contact-item">
           <mat-icon class="contact-icon">email</mat-icon>

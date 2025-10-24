@@ -12,6 +12,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatCardModule } from '@angular/material/card';
+import { AppService } from '../service/app.service';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-contact-page',
@@ -31,17 +33,15 @@ import { MatCardModule } from '@angular/material/card';
 })
 export class ContactPageComponent {
   contactForm: FormGroup;
+  companyData;
 
-  // Company address for Google Maps
-  companyAddress = {
-    name: 'K B Industries',
-    address:
-      'Gat No-154/1 Plot No16,17 Opposite India Petrol pump, Sanaswadi, Pune-Nagar Road, Tal-Shirur, Dist-Pune. 412208',
-    phone: '+91 9822275293 / +91 9850211045',
-    email: 'info@kbpackaging.com',
-  };
-
-  constructor(private formBuilder: FormBuilder, private snackBar: MatSnackBar) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private snackBar: MatSnackBar,
+    private appService: AppService,
+    private sanitizer: DomSanitizer
+  ) {
+    this.companyData = this.appService.data;
     this.contactForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       phone: [
